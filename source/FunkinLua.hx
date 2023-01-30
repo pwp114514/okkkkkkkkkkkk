@@ -2861,6 +2861,7 @@ class FunkinLua {
 	}
 	#end
 	
+	#if MODS_ALLOWED
 	function initLuaShader(name:String, ?glslVersion:Int = 120)
 	{
 		if(!ClientPrefs.shaders) return false;
@@ -2914,7 +2915,7 @@ class FunkinLua {
 		#end
 		return false;
 	}
-
+	#end
 	function getGroupStuff(leArray:Dynamic, variable:String) {
 		var killMe:Array<String> = variable.split('.');
 		if(killMe.length > 1) {
