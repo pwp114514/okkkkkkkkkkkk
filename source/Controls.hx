@@ -384,9 +384,7 @@ class Controls extends FlxActionSet
 	}
 	#end
 
-	override function update()
-	{
-			#if mobile
+	#if mobile
 	public var trackedInputsUI:Array<FlxActionInput> = [];
 	public var trackedInputsNOTES:Array<FlxActionInput> = [];
 
@@ -517,6 +515,10 @@ class Controls extends FlxActionSet
 		}
 	}
 	#end
+	
+	override function update()
+	{
+			
 		super.update();
 	}
 
