@@ -1570,7 +1570,7 @@ class PlayState extends MusicBeatState
 			startAndEnd();
 			return;
 		}
-
+		#if VIDEOS_ALLOWED 		
 		var video:VideoHandler = new VideoHandler();
 		video.playVideo(filepath);
 		video.finishCallback = function()
@@ -1582,6 +1582,7 @@ class PlayState extends MusicBeatState
 		FlxG.log.warn('Platform not supported!');
 		startAndEnd();
 		return;
+		#end
 		#end
 	}
 
